@@ -1,0 +1,12 @@
+import bpy
+
+collection_id = "collection_name"
+collection = bpy.data.collections.get(collection_id)
+
+extrude_value = 0.0005
+
+if collection:
+    for obj in collection.all_objects:
+        obj.data.extrude = extrude_value
+else:
+    print("NO")
